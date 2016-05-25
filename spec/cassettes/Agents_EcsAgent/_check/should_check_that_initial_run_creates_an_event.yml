@@ -1,0 +1,209 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ecs.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"family":"HuginnAgentsEcsAgent-1061892591","containerDefinitions":[{"name":"worker","image":"ubuntu:14.04","memory":512,"essential":true,"command":["/bin/true"],"environment":[{"name":"ASDF","value":"true"}]}]}'
+    headers:
+      Content-Type:
+      - application/x-amz-json-1.1
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.15 ruby/2.3.0 x86_64-darwin15
+      X-Amz-Target:
+      - AmazonEC2ContainerServiceV20141113.RegisterTaskDefinition
+      X-Amz-Date:
+      - 20160525T201421Z
+      Host:
+      - ecs.us-east-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - asdf
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=/20160525/us-east-1/ecs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date;x-amz-target,
+        Signature=
+      Content-Length:
+      - '211'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Wed, 25 May 2016 20:14:22 GMT
+      Content-Type:
+      - application/x-amz-json-1.1
+      Content-Length:
+      - '441'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 44f6ab66-22b5-11e6-ac21-asdf
+    body:
+      encoding: UTF-8
+      string: '{"taskDefinition":{"containerDefinitions":[{"command":["/bin/true"],"cpu":0,"environment":[{"name":"ASDF","value":"true"}],"essential":true,"image":"ubuntu:14.04","memory":512,"mountPoints":[],"name":"worker","portMappings":[],"volumesFrom":[]}],"family":"HuginnAgentsEcsAgent-1061892591","revision":5,"status":"ACTIVE","taskDefinitionArn":"arn:aws:ecs:us-east-1:696278446003:task-definition/HuginnAgentsEcsAgent-1061892591:5","volumes":[]}}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:14:21 GMT
+- request:
+    method: post
+    uri: https://ecs.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"cluster":"testing","taskDefinition":"HuginnAgentsEcsAgent-1061892591:5","count":1,"startedBy":"HuginEcsAgent-1061892591"}'
+    headers:
+      Content-Type:
+      - application/x-amz-json-1.1
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.15 ruby/2.3.0 x86_64-darwin15
+      X-Amz-Target:
+      - AmazonEC2ContainerServiceV20141113.RunTask
+      X-Amz-Date:
+      - 20160525T201421Z
+      Host:
+      - ecs.us-east-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - asdf
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=/20160525/us-east-1/ecs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date;x-amz-target,
+        Signature=
+      Content-Length:
+      - '123'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Wed, 25 May 2016 20:14:22 GMT
+      Content-Type:
+      - application/x-amz-json-1.1
+      Content-Length:
+      - '821'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 453d0345-22b5-11e6-bc87-asdf
+    body:
+      encoding: UTF-8
+      string: '{"failures":[],"tasks":[{"clusterArn":"arn:aws:ecs:us-east-1:696278446003:cluster/testing","containerInstanceArn":"arn:aws:ecs:us-east-1:696278446003:container-instance/109dd3c3-0dcf-4a26-aa0f-7ae1afa86a7c","containers":[{"containerArn":"arn:aws:ecs:us-east-1:696278446003:container/44884b9e-c0f0-4ef5-b5fb-be8ace94ad34","lastStatus":"PENDING","name":"worker","taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6"}],"createdAt":1.464207262778E9,"desiredStatus":"RUNNING","lastStatus":"PENDING","overrides":{"containerOverrides":[{"name":"worker"}]},"startedBy":"HuginEcsAgent-1061892591","taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6","taskDefinitionArn":"arn:aws:ecs:us-east-1:696278446003:task-definition/HuginnAgentsEcsAgent-1061892591:5"}]}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:14:22 GMT
+- request:
+    method: post
+    uri: https://ecs.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"cluster":"testing","tasks":["arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6"]}'
+    headers:
+      Content-Type:
+      - application/x-amz-json-1.1
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.15 ruby/2.3.0 x86_64-darwin15
+      X-Amz-Target:
+      - AmazonEC2ContainerServiceV20141113.DescribeTasks
+      X-Amz-Date:
+      - 20160525T201432Z
+      Host:
+      - ecs.us-east-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - asdf
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=/20160525/us-east-1/ecs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date;x-amz-target,
+        Signature=
+      Content-Length:
+      - '110'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Wed, 25 May 2016 20:14:33 GMT
+      Content-Type:
+      - application/x-amz-json-1.1
+      Content-Length:
+      - '966'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 4bc4c3dd-22b5-11e6-b0d4-asdf
+    body:
+      encoding: UTF-8
+      string: '{"failures":[],"tasks":[{"clusterArn":"arn:aws:ecs:us-east-1:696278446003:cluster/testing","containerInstanceArn":"arn:aws:ecs:us-east-1:696278446003:container-instance/109dd3c3-0dcf-4a26-aa0f-7ae1afa86a7c","containers":[{"containerArn":"arn:aws:ecs:us-east-1:696278446003:container/44884b9e-c0f0-4ef5-b5fb-be8ace94ad34","exitCode":0,"lastStatus":"STOPPED","name":"worker","networkBindings":[],"taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6"}],"createdAt":1.464207262778E9,"desiredStatus":"STOPPED","lastStatus":"STOPPED","overrides":{"containerOverrides":[{"name":"worker"}]},"startedAt":1.464207263892E9,"startedBy":"HuginEcsAgent-1061892591","stoppedAt":1.464207264194E9,"stoppedReason":"Essential
+        container in task exited","taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6","taskDefinitionArn":"arn:aws:ecs:us-east-1:696278446003:task-definition/HuginnAgentsEcsAgent-1061892591:5"}]}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:14:33 GMT
+- request:
+    method: post
+    uri: https://ecs.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"cluster":"testing","tasks":["arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6"]}'
+    headers:
+      Content-Type:
+      - application/x-amz-json-1.1
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.15 ruby/2.3.0 x86_64-darwin15
+      X-Amz-Target:
+      - AmazonEC2ContainerServiceV20141113.DescribeTasks
+      X-Amz-Date:
+      - 20160525T201433Z
+      Host:
+      - ecs.us-east-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - asdf
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=/20160525/us-east-1/ecs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date;x-amz-target,
+        Signature=
+      Content-Length:
+      - '110'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Wed, 25 May 2016 20:14:34 GMT
+      Content-Type:
+      - application/x-amz-json-1.1
+      Content-Length:
+      - '966'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 4c046473-asdf-asdf-asdf-asdf
+    body:
+      encoding: UTF-8
+      string: '{"failures":[],"tasks":[{"clusterArn":"arn:aws:ecs:us-east-1:696278446003:cluster/testing","containerInstanceArn":"arn:aws:ecs:us-east-1:696278446003:container-instance/109dd3c3-0dcf-4a26-aa0f-7ae1afa86a7c","containers":[{"containerArn":"arn:aws:ecs:us-east-1:696278446003:container/44884b9e-c0f0-4ef5-b5fb-be8ace94ad34","exitCode":0,"lastStatus":"STOPPED","name":"worker","networkBindings":[],"taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6"}],"createdAt":1.464207262778E9,"desiredStatus":"STOPPED","lastStatus":"STOPPED","overrides":{"containerOverrides":[{"name":"worker"}]},"startedAt":1.464207263892E9,"startedBy":"HuginEcsAgent-1061892591","stoppedAt":1.464207264194E9,"stoppedReason":"Essential
+        container in task exited","taskArn":"arn:aws:ecs:us-east-1:696278446003:task/7742b258-ef31-4c93-b4e8-d7a232d2c3f6","taskDefinitionArn":"arn:aws:ecs:us-east-1:696278446003:task-definition/HuginnAgentsEcsAgent-1061892591:5"}]}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:14:33 GMT
+recorded_with: VCR 2.9.2

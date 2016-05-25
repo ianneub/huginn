@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t 696278446003.dkr.ecr.us-east-1.amazonaws.com/ianneub/huginn:latest .
+
+test:
+  override:
+    - echo "i wish there were tests here."
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - eval $(aws ecr get-login --region us-east-1)
+      - docker push 696278446003.dkr.ecr.us-east-1.amazonaws.com/ianneub/huginn:latest
